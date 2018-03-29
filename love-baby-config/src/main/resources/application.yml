@@ -1,0 +1,17 @@
+server:
+    port: 1802
+
+spring:
+  application:
+      name: love-baby-config
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/love-baby/love-baby-config-repo.git
+          search-paths: config-repo
+eureka:
+  client:
+    service-url:
+           defaultZone: http://eureka.love-baby.vip/eureka/
